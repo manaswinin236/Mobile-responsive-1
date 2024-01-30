@@ -1,0 +1,282 @@
+/*styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+/* Hide the main logo by default */
+#main-logo{
+    display: none;
+}
+.logo{
+    padding-left: 20px;
+    height: 25px;
+}
+
+/* Styles for the sidenav */
+.sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2b2b2b;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+.navpng{
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.subpng{
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+.sidenav a {
+    padding: 3px 8px 3px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #eaeaea;
+} 
+
+div.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#subscription{
+    color: rgb(180, 180, 180);
+    margin: 4px 4px 4px 32px;
+}
+
+a.asub{
+    padding: 1px 8px 1px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #eaeaea;
+}
+
+
+.main{
+    margin-left: 250px;
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#topnav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+}
+
+input{
+    background-color: black;
+}
+
+input::placeholder{
+    color: #ababab;
+    padding-left: 10px;
+}
+
+.search-bar{
+    width: 575px;
+    height: 45px;
+    margin-left: 150px;
+    border: 2px solid rgb(67, 67, 67);
+    display: flex;
+}
+
+.search-input{
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search-button{
+    background-color: rgb(67, 67, 67);
+    border: none;
+    padding: 8px 12px;
+    width: 75px;
+}
+
+.toprightpng{
+    height: 30px;
+    margin-top: 6px;
+}
+
+#mic{
+    height: 30px;
+    margin-top: 6px;
+    margin-right: 200px;
+    margin-left: 3px;
+}
+
+.toprightpng{
+    padding-left: 13px;
+}
+
+hr{  
+    height: 0.5px;  
+    background-color: rgb(111, 111, 111);  
+    border: none;  
+}
+
+/* Styles for options section */
+div#options{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 280px;
+    display: flex;
+    flex-direction: row;
+}
+
+#all{
+    background-color: white;
+    color: black;
+    padding: 3px 10px;
+}
+
+.rest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    background-color: #545454;
+    height: 25px;
+    width: fit-content;
+    padding: 3px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(153, 153, 153, 0.43);
+    font-size: 13px;
+}
+div.rest{
+    margin-left: 20px;
+}
+/* Styles for content section */
+#content{
+    margin-left: 300px;
+    margin-top: 25px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 275px 275px 275px;
+    overflow: hidden;
+}
+
+.contentimg{
+    width: 275px;
+}
+
+.individual{
+    margin: 0px;
+    padding: 0px;
+    height: 230px;
+    width: 260px;
+}
+
+.account{
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
+h3{
+    margin-top: 10px;
+    padding-left: 45px;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+
+}
+
+/*Added media query to make my original code mobile responsive */
+@media only screen and (max-width: 768px) {
+
+    img.toprightpng.nogo,
+    .sidenav {
+        display: none;
+    }
+
+    #main-logo{
+        display: block;
+        margin: 10px 0px 10px 5px;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .search-button {
+        width: 20%;
+    }
+   
+    img#profile-pic{
+        position: absolute;
+        top: 50px;
+        right: 15px;
+    }
+
+    img#mic{
+        position: absolute;
+        top: 50px;
+        
+    }
+
+    div#options {
+        margin-left: 0;
+        display: flex;
+        margin: 2px 5px 2px 15px ;
+        overflow: scroll;
+    }
+
+    div.rest{
+        height: 20px;
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+    #content {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    img.contentimg{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .individual {
+        width: 100%;
+        height: max-content;
+        margin-bottom: 20px;
+    }
+
+    .account {
+        float: none;
+        margin-left: 10px;
+    }
+
+    h3 {
+        padding-left: 10px;
+    }
+}
